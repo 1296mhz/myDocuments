@@ -6,16 +6,18 @@ export default function routing($urlRouterProvider, $locationProvider, $statePro
   $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/');
 
-      let homeState = {
-      name: 'home',
-      url: '/',
-      component: 'homeComponent'
-    }
-    let aboutState = {
-      name: 'about',
-      url: '/about',
-      component: 'aboutComponent'
-    }
-    $stateProvider.state(homeState);
-    $stateProvider.state(aboutState);
+  let homeState = {
+    name: 'home',
+    url: '/',
+    component: 'homeComponent'
+  };
+
+  let aboutState = {
+    name: 'about',
+    url: '/about',
+    component: 'aboutComponent'
+  };
+
+  $stateProvider.state(homeState);
+  $stateProvider.state(aboutState);
 }
