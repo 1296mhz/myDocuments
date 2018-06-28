@@ -20,36 +20,10 @@ AppCtrl.$inject = ['$mdSidenav'];
 const deps = ['ui.router', 'ngMaterial', 'ngMessages', 'ngAnimate', 'ngAria', 'HomeModule', 'AboutModule','UserCardModule']
 
 angular.module(MODULE_NAME, deps)
-  .directive('app', app)
-  .controller('AppCtrl', AppCtrl)
+  .component('app', {
+    template: require('./app.tmpl.html'),
+    controller: AppCtrl
+  })
   .config(routing)
-  /*
-  .config((
-    // $stateProvider,
-    // $urlRouterProvider,
-    $mdThemingProvider,
-    $mdIconProvider) => {
-
-
-    $mdThemingProvider.theme('indigo')
-      .primaryPalette('brown')
-      .accentPalette('green');
-
-    $urlRouterProvider.otherwise('/');
-
-    let homeState = {
-      name: 'home',
-      url: '/',
-      component: 'homeComponent'
-    }
-    let aboutState = {
-      name: 'about',
-      url: '/about',
-      component: 'aboutComponent'
-    }
-    $stateProvider.state(homeState);
-    $stateProvider.state(aboutState);
-
-  });
-*/
+  
 export default MODULE_NAME;
