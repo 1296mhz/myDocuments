@@ -1,16 +1,14 @@
 <section>
-    <md-subheader>
-        <md-list layout="column" layout-padding>
-            <md-list-item class="md-3-line">
-              <img ng-src="./img/images/cat.jpeg" class="md-avatar" alt="котэ">
-              <div class="md-list-item-text">
-                <h3>Username</h3>
-                <h4>Role</h4>
-                <p>
-                  Любит вкусняшки
-                </p>
-              </div>
-            </md-list-item>
-          </md-list>
-    </md-subheader>
-  </section>
+  <md-list layout-padding>
+    <md-list-item class="md-3-line">
+      <img ng-src="./img/images/cat.jpeg" class="md-avatar" alt="ava">
+      <div class="md-list-item-text">
+        <h3>{{ $ctrl.userProfile.username }}</h3>
+        <h4>{{ $ctrl.userProfile.email }}</h4>
+        <p>
+          {{ $ctrl.userProfile.role }}
+        </p>
+      </div>
+    </md-list-item>
+  </md-list>
+</section>

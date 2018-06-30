@@ -6,24 +6,23 @@ import ngAnimate from 'angular-animate';
 import ngAria from 'angular-aria';
 
 import '../../node_modules/angular-material/angular-material.css';
-//import '../style/app.css';
-import app from './components/app/app.directive';
+import './app.css';
+import routing from './app.config';
 import AppCtrl from './components/app/app.controller';
 
-import routing from './app.config';
+import AppComponent from './components/app/app.component';
 import UserCardModule from './components/userCard/userCard.module';
 
 const MODULE_NAME = 'app';
 
 AppCtrl.$inject = ['$mdSidenav'];
 
-const deps = ['ui.router', 'ngMaterial', 'ngMessages', 'ngAnimate', 'ngAria', 'HomeModule', 'AboutModule','UserCardModule']
+const ASSETS = ['ui.router', 'ngMaterial', 'ngMessages', 'ngAnimate', 'ngAria'];
+const APP_MODULES = ['HomeModule', 'AboutModule', 'UserCardModule'];
+const MODULE_DEPS = ASSETS.concat(APP_MODULES);
 
-angular.module(MODULE_NAME, deps)
-  .component('app', {
-    template: require('./app.tmpl.html'),
-    controller: AppCtrl
-  })
+angular.module(MODULE_NAME, MODULE_DEPS)
+  .component("app", AppComponent)
   .config(routing)
-  
+
 export default MODULE_NAME;

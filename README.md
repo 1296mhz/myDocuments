@@ -89,3 +89,4 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 [MIT](/LICENSE)
 # angularjs-material-webpack-boilerplate
 # mean-webpack
+# myDocuments
