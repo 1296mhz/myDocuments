@@ -18,7 +18,7 @@ const MODULE_NAME = 'app';
 AppCtrl.$inject = ['$mdSidenav'];
 
 const ASSETS = ['ui.router', 'ngMaterial', 'ngMessages', 'ngAnimate', 'ngAria'];
-const APP_MODULES = ['HomeModule', 'AboutModule', 'UserCardModule'];
+const APP_MODULES = ['HomeModule', 'AboutModule', 'UserCardModule', 'ProfileModule'];
 const MODULE_DEPS = ASSETS.concat(APP_MODULES);
 
 angular.module(MODULE_NAME, MODULE_DEPS)

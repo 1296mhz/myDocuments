@@ -5,21 +5,25 @@ class AppCtrl {
         this.toggleLeft = this.buildToggler('left');
 
         this.userProfile = {
-            username: "AngularUser",
-            role: "Administrator"
+            username: "Sweet Cat",
+            role: "Administrator",
+            email: "myauu@cats.org"
         }
-        
+
         this.links = [
             {
                 "uisref": "home",
                 "icon": "home"
 
-            },
-            {
+            }, {
                 "uisref": "about",
+                "icon": "account_box"
+            }, {
+                "uisref": "profile",
                 "icon": "account_box"
             }
         ];
+
     }
 
     buildToggler(componentId) {
